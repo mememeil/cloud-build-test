@@ -1,7 +1,3 @@
 steps:
-- name: gcr.io/cloud-builders/gcloud
-  entrypoint: 'bash'
-  args:
-    - -c
-    - |
-      ls -la /workspace/
+- name: 'ubuntu'
+  args: ['echo', 'hello world']
