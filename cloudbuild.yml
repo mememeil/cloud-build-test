@@ -1,4 +1,9 @@
 steps:
+- name: 'ubuntu'
+  args:
+    - echo
+    - "hello world"
+
 - name: gcr.io/cloud-builders/gcloud
   entrypoint: bash
   args:
