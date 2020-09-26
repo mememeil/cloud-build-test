@@ -5,10 +5,10 @@ steps:
   - -c
   - |
     ls -la
-    # gcloud compute instances create inspec-master \
-    # --image inspec-image \
-    # --zone us-west1-b \
-    # --metadata-from-file startup-script=workspace/startup.sh
+    gcloud compute instances create inspec-master \
+    --image inspec-image \
+    --zone us-west1-b \
+    --metadata-from-file startup-script=startup.sh
 
 
     # 削除コマンド ※確認のyを押さないと消せないの？
