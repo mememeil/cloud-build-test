@@ -6,7 +6,7 @@ steps:
   - |
     ls -la
     gcloud compute instances create inspec-master \
-    --image inspec-image \
+    --image inspec-image-yes \
     --zone us-west1-b \
     --metadata-from-file startup-script=startup.sh
 
