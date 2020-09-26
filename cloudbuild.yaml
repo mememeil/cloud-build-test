@@ -12,4 +12,11 @@ steps:
 
 
     # 削除コマンド ※確認のyを押さないと消せないの？
-    #gcloud compute instances delete inspec-master-vol2 --zone=us-west1-b
+    # gcloud compute instances delete inspec-master-vol2 --zone=us-west1-b
+
+    # テストされる側のインスタンス
+    # gcloud compute instances create test-server4 \
+    # --zone us-west1-b \
+    # --image-family=centos-7 --image-project=centos-cloud \
+    # --machine-type f1-micro \
+    # --network-interface no-address
