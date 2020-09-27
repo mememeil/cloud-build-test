@@ -8,5 +8,7 @@ inspec exec cloud-build-test/inspec/controls/test-server1.rb -t ssh://kodhikodhi
 EOF
 
 sleep 10s
-SCRIPT=$(ls | grep .sh)
-source $SCRIPT
+source /root/starup.sh
+
+sleep 10s
+source /root/starup.sh
