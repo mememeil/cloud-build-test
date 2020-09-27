@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sleep 60s
 eval $(ssh-agent)
 ssh-add /root/.ssh/id_rsa
 git clone https://github.com/mememeil/cloud-build-test.git /root/cloud-build-test
