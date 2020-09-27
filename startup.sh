@@ -1,7 +1,7 @@
 #!/bin/bash
 
 su - kodhikodhi <<EOF
-git clone https://github.com/mememeil/cloud-build-test.git cloud-build-test
+git clone https://github.com/mememeil/cloud-build-test.git
 EOF
 eval $(ssh-agent)
 ssh-add /root/.ssh/id-rsa
