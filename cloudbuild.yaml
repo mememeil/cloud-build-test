@@ -56,6 +56,8 @@ steps:
     - |
       # gcloud compute instances list --filter="name='inspec-master'" --format="value(networkInterfaces[].accessConfigs[0].natIP)" > _IPADD
       ssh -i /root/.ssh/id_rsa -t -t kodhikodhi@35.247.116.152
+      echo hello
+      exit
   volumes:
   - name: ssh
     path: /root/.ssh  
