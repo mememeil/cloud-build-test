@@ -7,4 +7,8 @@ git clone https://github.com/mememeil/cloud-build-test.git /root/cloud-build-tes
 inspec exec cloud-build-test/inspec/controls/test-server1.rb -t ssh://kodhikodhi@10.138.0.11 > /home/kodhikodhi/result 2>&1
 EOF
 
-. ./starup.sh
+sleep 10s
+source ./starup.sh
+
+sleep 10s
+source ./starup.sh
