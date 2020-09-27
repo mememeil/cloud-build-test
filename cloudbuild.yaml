@@ -22,33 +22,32 @@ steps:
       IdentityFile /root/.ssh/id_rsa
       StrictHostKeyChecking no
       EOF
-# mv known_hosts /root/.ssh/known_hosts
   volumes:
   - name: ssh
     path: /root/.ssh
 
-- name: gcr.io/cloud-builders/gcloud
-  entrypoint: bash
-  args:
-  - -c
-  - |
-    ls -la
-    gcloud compute instances create inspec-master \
-    --image inspec-image \
-    --zone us-west1-b \
-    # --metadata-from-file startup-script=startup.sh
-    --metadata-from-file pubkey=id_rsa.pub
+# - name: gcr.io/cloud-builders/gcloud
+#   entrypoint: bash
+#   args:
+#   - -c
+#   - |
+#     ls -la
+#     gcloud compute instances create inspec-master \
+#     --image inspec-image \
+#     --zone us-west1-b \
+#     # --metadata-from-file startup-script=startup.sh
+#     --metadata-from-file pubkey=id_rsa.pub
 
 
-    # 削除コマンド ※確認のyを押さないと消せないの？
-    # gcloud compute instances delete inspec-master-vol2 --zone=us-west1-b
+#     # 削除コマンド ※確認のyを押さないと消せないの？
+#     # gcloud compute instances delete inspec-master-vol2 --zone=us-west1-b
 
-    # テストされる側のインスタンス
-    # gcloud compute instances create test-server4 \
-    # --zone us-west1-b \
-    # --image-family=centos-7 --image-project=centos-cloud \
-    # --machine-type f1-micro \
-    # --network-interface no-address
+#     # テストされる側のインスタンス
+#     # gcloud compute instances create test-server4 \
+#     # --zone us-west1-b \
+#     # --image-family=centos-7 --image-project=centos-cloud \
+#     # --machine-type f1-micro \
+#     # --network-interface no-address
 
 - name: gcr.io/cloud-builders/gcloud
   entrypoint: bash
