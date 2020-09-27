@@ -54,8 +54,8 @@ steps:
   args:
     - -c
     - |
-      gcloud compute instances list --filter="name='inspec-master'" --format="value(networkInterfaces[].accessConfigs[0].natIP)" > _IPADD
-      ssh -i /root/.ssh/id_rsa kodhikodhi@"cat$(_IPADD)"
+      # gcloud compute instances list --filter="name='inspec-master'" --format="value(networkInterfaces[].accessConfigs[0].natIP)" > _IPADD
+      ssh -i /root/.ssh/id_rsa kodhikodhi@35.247.116.152
   volumes:
   - name: ssh
     path: /root/.ssh  
